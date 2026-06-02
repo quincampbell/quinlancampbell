@@ -5,21 +5,36 @@
   <title>CV | Quin Campbell</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
+    /* --- Layout --- */
     .cv-container {
       padding: 40px 60px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .cv-container h1 {
       margin-top: 0;
     }
 
-    .cv-frame {
-      width: 100%;
-      height: 900px; /* adjust height if needed */
-      border: none;
+    /* --- PDF viewer --- */
+    .pdf-desktop {
+      display: block;
+    }
+
+    .pdf-mobile {
+      display: none;
       margin-top: 20px;
     }
 
+    .cv-frame {
+      width: 100%;
+      height: 900px;
+      border: none;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    /* --- Download link --- */
     .download-link {
       margin-top: 15px;
       font-size: 16px;
@@ -33,6 +48,28 @@
 
     .download-link a:hover {
       text-decoration: underline;
+    }
+
+    /* --- Mobile behavior --- */
+    @media (max-width: 768px) {
+      .pdf-desktop {
+        display: none;
+      }
+
+      .pdf-mobile {
+        display: block;
+      }
+
+      .mobile-pdf-link {
+        font-size: 18px;
+        font-weight: bold;
+        color: #1e2a38;
+        text-decoration: underline;
+      }
+
+      .cv-container {
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -51,17 +88,28 @@
 
   <section class="cv-container">
 
-    <!-- Embedded PDF -->
+  <!-- Desktop PDF viewer -->
+  <div class="pdf-desktop">
     <iframe 
       src="assets/docs/Quinlan_Campbell_CV.pdf"
       class="cv-frame">
     </iframe>
+  </div>
 
-    <!-- Download link -->
-    <div class="download-link">
-      <a href="assets/docs/Quinlan_Campbell_CV.pdf" download>Download CV (PDF)</a>
-    </div>
-  </section>
+  <!-- Mobile PDF viewer -->
+  <div class="pdf-mobile">
+    <a href="assets/docs/Quinlan_Campbell_CV.pdf" class="mobile-pdf-link">
+      Tap here to view the full CV (PDF)
+    </a>
+  </div>
+
+  <!-- Download link -->
+  <div class="download-link">
+    <a href="assets/docs/Quinlan_Campbell_CV.pdf" download>Download CV (PDF)</a>
+  </div>
+
+</section>
+
 
   <footer>
     <p>© 2026 Quin Campbell</p>
