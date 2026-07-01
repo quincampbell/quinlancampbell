@@ -163,3 +163,72 @@ footer {
   font-size: 14px;
   color: #555;
 }
+
+.maps-container{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 30px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:44px;
+    margin-bottom:8px;
+    color:#1e2a38;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#666;
+    font-size:18px;
+    margin-bottom:60px;
+}
+
+.figure-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    margin-bottom:60px;
+    transition:.25s;
+}
+
+.figure-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 35px rgba(0,0,0,.12);
+}
+
+.figure-card img{
+    width:100%;
+    display:block;
+}
+
+.figure-content{
+    padding:28px;
+}
+
+.figure-title{
+    font-size:24px;
+    color:#1e2a38;
+    margin-bottom:12px;
+}
+
+.figure-caption{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:22px;
+}
+
+.figure-button{
+    display:inline-block;
+    padding:10px 22px;
+    background:#1e2a38;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    transition:.2s;
+}
+
+.figure-button:hover{
+    background:#35506d;
+}
