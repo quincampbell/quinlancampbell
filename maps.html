@@ -3,40 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <title>Maps | Quin Campbell</title>
+
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
   <style>
     .maps-container {
-      padding: 40px 60px;
+      max-width: 1400px;
+      margin: auto;
+      padding: 60px 40px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 42px;
+      color: #1e2a38;
+      margin-bottom: 50px;
+      letter-spacing: 2px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 40px;
+    }
+
+    figure {
+      margin: 0;
       text-align: center;
     }
 
-    .maps-container h2 {
-      font-size: 28px;
-      margin-top: 60px;
-      color: #1e2a38;
+    figure img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.15);
+      transition: transform .25s ease;
+    }
+
+    figure img:hover {
+      transform: scale(1.02);
+    }
+
+    figcaption {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #555;
+      line-height: 1.5;
+      font-style: italic;
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>Maps</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="maps.html">Maps</a>
-      <a href="publications.html">Publications & Presentations</a>
-      <a href="cv.html">CV</a>
-    </nav>
-  </header>
 
-  <section class="maps-container">
-    <h2>Coming Soon!</h2>
-  </section>
+<header>
+  <h1>Maps</h1>
 
-  <footer>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="maps.html">Maps</a>
+    <a href="publications.html">Publications & Presentations</a>
+    <a href="cv.html">CV</a>
+  </nav>
+</header>
+
+<section class="maps-container">
+
+    <h2 class="section-title">Carey Lab</h2>
+
+    <div class="gallery">
+
+        <figure>
+            <img src="images/reservoirs.png" alt="Reservoir Study Sites">
+            <figcaption>
+                <strong>Figure 1.</strong> Reservoir study sites used by the
+                Virginia Tech Carey Lab, including Falling Creek Reservoir,
+                Beaverdam Reservoir, and Carvins Cove Reservoir.
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/falling-creek-macrophytes.png" alt="Macrophytes">
+            <figcaption>
+                <strong>Figure 2.</strong> Common emergent macrophyte species
+                identified around Falling Creek Reservoir and their seasonal
+                flowering and seed production periods.
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/macrophyte-distribution.png" alt="Macrophyte Distribution">
+            <figcaption>
+                <strong>Figure 3.</strong> Distribution of emergent macrophyte
+                species along the shoreline of Falling Creek Reservoir,
+                illustrating differences in species richness and density.
+            </figcaption>
+        </figure>
+
+    </div>
+
+</section>
+
+<footer>
     <p>© 2026 Quin Campbell</p>
-  </footer>
+</footer>
+
 </body>
 </html>
