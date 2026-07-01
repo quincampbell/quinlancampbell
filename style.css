@@ -1,0 +1,356 @@
+/*GLOBAL STYLES
+==========================================================*/
+
+/* Basic page styling */
+body {
+    margin: 0;
+    background: #f8f9fa;
+    color: #222;
+    font-family: Arial, sans-serif;
+}
+
+/*HEADER & NAVIGATION
+==========================================================*/
+
+/* Header */
+header {
+    background: #1e2a38;
+    color: white;
+    padding: 20px 40px;
+}
+
+/* Navigation links */
+nav a {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*UNIVERSAL PAGE SPACING
+==========================================================*/
+
+main,
+.content,
+.about-section {
+    padding: 40px 60px 0 50px;
+    box-sizing: border-box;
+}
+
+/*ABOUT PAGE LAYOUT
+==========================================================*/
+
+/* Places profile photo and text side-by-side */
+.about-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Circular profile image */
+.profile-pic {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Keeps photo stacked above contact information */
+.photo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contact information */
+.contact-info {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+}
+
+.contact-info a {
+    color: #1e2a38;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/*ABOUT TEXT
+==========================================================*/
+
+/* Limits line length for easier reading */
+.about-text {
+    max-width: 800px;
+}
+
+/* About page heading */
+.about-text h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+/* About page paragraphs */
+.about-text p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/*GENERAL CONTENT PAGES
+==========================================================*/
+
+/* Section headings */
+.content h2 {
+    margin-top: 0;
+    margin-bottom: .3em;
+}
+
+/* Paragraph spacing */
+.content p {
+    margin-top: .2em;
+}
+
+/*PRESENTATIONS PAGE
+==========================================================*/
+
+/* Horizontal scrolling gallery of presentation thumbnails */
+.presentations {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 40px;
+    margin-top: 10px;
+
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    padding: 0;
+}
+
+/* Individual presentation */
+.presentation-item {
+    flex: 0 0 260px;
+    text-align: center;
+}
+
+/* Thumbnail image */
+.presentation-img {
+    width: 100%;
+    height: 160px;
+
+    object-fit: cover;
+    object-position: center 20%;
+
+    border-radius: 0;
+}
+
+/* Crop for third thumbnail */
+.presentations .presentation-item:nth-child(3) .presentation-img {
+    object-position: center 70%;
+}
+
+/* Caption beneath thumbnail */
+.presentations .presentation-item p {
+    margin: 0;
+    padding: 0;
+
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+/*MAPS / FIGURES PAGE
+==========================================================*/
+
+/* Overall page width */
+.maps-container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 0px 0px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px;
+}
+
+@media (max-width: 1250px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Large page title */
+.section-title {
+    margin-bottom: 8px;
+    text-align: center;
+
+    font-size: 44px;
+    color: #1e2a38;
+}
+
+figure img {
+    width: 100%;
+    height: auto;      /* choose whatever height looks good */
+    border-radius: 0px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.15);
+   transition: transform .25s ease;
+}
+
+/* Subtitle beneath title */
+.section-subtitle {
+    margin-bottom: 60px;
+    text-align: center;
+
+    font-size: 18px;
+    color: #666;
+}
+
+/* Individual figure card */
+.figure-card {
+    margin-bottom: 60px;
+
+    overflow: hidden;
+    border-radius: 0px;
+
+    background: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+
+    transition: .25s;
+}
+
+/* Lift card slightly on hover */
+.figure-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(0,0,0,.12);
+}
+
+/* Figure image */
+.figure-card img {
+    display: block;
+    width: 100%;
+}
+
+/* Text area beneath figure */
+.figure-content {
+    padding: 0px;
+}
+
+/* Figure title */
+.figure-title {
+    margin-bottom: 12px;
+
+    font-size: 24px;
+    color: #1e2a38;
+}
+
+/* Figure description */
+.figure-caption {
+    margin-bottom: 22px;
+
+    line-height: 1.7;
+    color: #666;
+}
+
+/* Button linking to full-size figure */
+.figure-button {
+    display: inline-block;
+
+    padding: 0px 0px;
+
+    background: #1e2a38;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 6px;
+
+    transition: .2s;
+}
+
+.figure-button:hover {
+    background: #35506d;
+}
+
+/*CV PAGE
+==========================================================*/
+
+/* Embedded PDF (desktop only) */
+.pdf-desktop {
+    display: block;
+}
+
+/* Download link shown on mobile */
+.pdf-mobile {
+    display: none;
+}
+
+/* Embedded PDF viewer */
+.cv-frame {
+    width: 100%;
+    height: 900px;
+
+    margin-top: 20px;
+    border: none;
+
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+/* Download section */
+.download-link {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.download-link a {
+    color: #1e2a38;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.download-link a:hover {
+    text-decoration: underline;
+}
+
+/*FOOTER
+==========================================================*/
+
+footer {
+    padding: 20px 40px;
+
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+/*RESPONSIVE DESIGN
+==========================================================*/
+
+/*
+On tablets and phones:
+- Hide embedded PDF
+- Show download link instead
+*/
+@media screen and (max-width: 1024px) {
+
+    .pdf-desktop {
+        display: none;
+    }
+
+    .pdf-mobile {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .mobile-pdf-link {
+        color: #1e2a38;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+}
